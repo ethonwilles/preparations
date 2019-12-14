@@ -32,6 +32,9 @@ cal_total_beans = amt_of_bean_plants * (math.floor(beans * 120))
 amt_of_cal_per_bean_per_year = math.floor(cal_total_beans / 55) * 365
 items.append(amt_of_cal_per_bean_per_year)
 
-print(reduce(lambda elem, total: elem + total, items))
+
+
+print(f"Current Calculated Calories: {reduce(lambda elem, total: elem + total, items)}, Remaining Calories: {total - reduce(lambda elem, total: elem + total, items)}")
+print(f"Current Calculated Calories: {reduce(lambda elem, total: elem + total, items)}, Remaining Calories for One Man: {guy - reduce(lambda elem, total: elem + total, items)}")
 
 
